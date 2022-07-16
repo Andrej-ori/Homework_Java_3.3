@@ -8,14 +8,14 @@ public class CreditPaymentService {
      /*
        double a;
        double b;
-      double c;
+       double c;
      */
 
         monthlyInterestRate = loanPercentage / 100 / 12 ;
 
      /*
-        a = Math.pow((1 + monthlyInterestRate), creditTerm);
-        b = (Math.pow((1 + monthlyInterestRate), creditTerm))-1;   // роспись формулю расчета чтоб не запутаться
+        a = Math.pow((1 + monthlyInterestRate), creditTerm);       // оператор Math.pow(a, n) - позволяет число "a" ввести в степень "n" причем что "a" что "n"  могут быть как дробные (через точку) так и отрицательные
+        b = (Math.pow((1 + monthlyInterestRate), creditTerm))-1;   // роспись формулы расчета чтоб не запутаться
         c = a / b;    //  коэффициент аннуитета
      */
 
@@ -29,7 +29,7 @@ public class CreditPaymentService {
 
 
 /*
-p = s *(I+(I/(1+I)^n-1))
+ p = s *(I+(I/(1+I)^n-1))
  p - ежемесячный платеж
  s - сумма кредита
  I - Ежемесячная процентная ставка (расчитывается F(годовая процентная ставка) / 100 / 12)
