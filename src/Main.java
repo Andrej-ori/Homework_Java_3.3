@@ -1,8 +1,8 @@
-//import java.util.Scanner;
+//import java.util.Scanner; // импорт оператора позволяющего принимать ввод с клавиатуры
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService calculete = new CreditPaymentService();
-        //Scanner num = new Scanner(System.in);
+        //Scanner num = new Scanner(System.in);  // позволяет принимать ввод с клавиатуры
 
         double creditAmount = 1_000_000; // сумма кредита
         double creditTerm = 12; // срок кредита в месяцах
@@ -10,9 +10,10 @@ public class Main {
         double monthlyLoanPayment; // ежемесячный платёж по кредиту
 
         System.out.println("\nПриложение для расчета ежемесячного платежа по кредиту");
+        
         /*
         System.out.print("\nВведите Сумму кредита: "); // возможность ввода данных вручную с клавиатуры
-        creditAmount = num.nextDouble();
+        creditAmount = num.nextDouble(); 
 
         System.out.print("\nВведите Срок кредита (в месяцах): ");
         creditTerm = num.nextDouble();
@@ -20,33 +21,34 @@ public class Main {
         System.out.print("\nВведите Процент по кредиту: (в процентах)");
         loanPercentage = num.nextDouble();
         */
+        
         System.out.println("\nСумма кредита: 1 000 000 ");
         System.out.println("Срок кредита : 12 месяцев(а)");
         System.out.println("Годовая процентная ставка : 9,99 %");
 
-        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage);
+        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage); // обращение к оператору calculete в методе monthlyLoanPayment (находится в CreditPaymentService.java)
 
-         long a = (long) monthlyLoanPayment; // округление результата
+        long a = (long) monthlyLoanPayment; // округление результата (объявление переменой "a" тип long (т.к. у переменной monthlyLoanPayment тип double) для "отсечения" цифр после запятой
         System.out.println("Ежемесячный платёж по кредиту составляет : " + a);
 
         System.out.println("\nСумма кредита: 1 000 000 ");
         System.out.println("Срок кредита : 24 месяцев(а)");
         System.out.println("Годовая процентная ставка : 9,99 %");
 
-        creditTerm = 24;
+        creditTerm = 24; // изменение срока кредита с 12 на 24
 
-        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage);
+        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage);   // обращение к оператору calculete в методе monthlyLoanPayment (находится в CreditPaymentService.java)
 
-        a = (long) monthlyLoanPayment;
+        a = (long) monthlyLoanPayment;  // переменная "a" уже была объявлена поэтому сейчас её только изменяем присвоив новое значение monthlyLoanPayment полученое выше
         System.out.println("Ежемесячный платёж по кредиту составляет : " + a);
 
         System.out.println("\nСумма кредита: 1 000 000 ");
         System.out.println("Срок кредита : 36 месяцев(а)");
         System.out.println("Годовая процентная ставка : 9,99 %");
 
-        creditTerm = 36;
+        creditTerm = 36;   // изменение срока кредита с 24 на 36
 
-        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage);
+        monthlyLoanPayment = calculete.monthlyLoanPayment(creditAmount, creditTerm, loanPercentage);   // обращение к оператору calculete в методе monthlyLoanPayment (находится в CreditPaymentService.java)
 
         a = (long) monthlyLoanPayment;
         System.out.println("Ежемесячный платёж по кредиту составляет : " + a);
