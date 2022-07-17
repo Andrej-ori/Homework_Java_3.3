@@ -1,8 +1,6 @@
-//import java.util.Scanner; // импорт оператора позволяющего принимать ввод с клавиатуры
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService calculete = new CreditPaymentService();
-        //Scanner num = new Scanner(System.in);  // позволяет принимать ввод с клавиатуры
 
         double creditAmount = 1_000_000; // сумма кредита
         double creditTerm = 12; // срок кредита в месяцах
@@ -10,18 +8,7 @@ public class Main {
         double monthlyLoanPayment; // ежемесячный платёж по кредиту
 
         System.out.println("\nПриложение для расчета ежемесячного платежа по кредиту");
-        
-        /*
-        System.out.print("\nВведите Сумму кредита: "); // возможность ввода данных вручную с клавиатуры
-        creditAmount = num.nextDouble(); 
 
-        System.out.print("\nВведите Срок кредита (в месяцах): ");
-        creditTerm = num.nextDouble();
-
-        System.out.print("\nВведите Процент по кредиту: (в процентах)");
-        loanPercentage = num.nextDouble();
-        */
-        
         System.out.println("\nСумма кредита: 1 000 000 ");
         System.out.println("Срок кредита : 12 месяцев(а)");
         System.out.println("Годовая процентная ставка : 9,99 %");
